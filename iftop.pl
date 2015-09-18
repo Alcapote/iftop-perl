@@ -81,10 +81,12 @@ while(1)
 	{
 		$down = $traffic[$j][0] - $traffic_save[$j][0];
 		$up   = $traffic[$j][1] - $traffic_save[$j][1];
-		$down = int($down / 1000);
-		$up   = int($up / 1000);
+		$down = int($down / 128);
+		$up   = int($up / 128);
 		
-		@traffic_save = map { [@$_] } @traffic;
+		#@traffic_save = map { [@$_] } @traffic;
+                $traffic_save[$j][0] = "".$traffic[$j][0]."";
+                $traffic_save[$j][1] = "".$traffic[$j][1]."";
 
 		#$display = "$display".$interface[$j]."  =>  $down ko/s     |     $up ko/s\n";
 
