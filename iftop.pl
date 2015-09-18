@@ -81,8 +81,8 @@ while(1)
 	{
 		$down = $traffic[$j][0] - $traffic_save[$j][0];
 		$up   = $traffic[$j][1] - $traffic_save[$j][1];
-		$down = int($down / 128);
-		$up   = int($up / 128);
+		$down = int($down / 1024);
+		$up   = int($up / 1024);
 		
 		#@traffic_save = map { [@$_] } @traffic;
                 $traffic_save[$j][0] = "".$traffic[$j][0]."";
